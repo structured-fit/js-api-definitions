@@ -17,5 +17,5 @@ git subtree pull -P js-api-definitions git@github.com:structured-fit/js-api-defi
 .Push updates to GitHub
 [source,sh]
 ----
-git subtree pull -P js-api-definitions git@github.com:structured-fit/js-api-definitions.git <branch=master>
+git subtree push -P js-api-definitions git@github.com:structured-fit/js-api-definitions.git <branch=master>
 ----
