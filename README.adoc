@@ -1,0 +1,1 @@
+= Structured Fitness JS/TS API Definitions
