@@ -1,0 +1,24 @@
+= Structured Fitness JS/TS API Definitions
+
+== For Maintainers
+
+=== Repository Synchronization
+
+This repository is both in a public GitHub repository as well as in the private monolithic repository for Structured Fitness.
+
+The repository is manually synced, with all actions executed from inside the private monolithic repository.
+
+.Pull contributions from GitHub:
+[source,sh]
+----
+git subtree pull -P js-api-definitions git@github.com:structured-fit/js-api-definitions.git master
+----
+
+.Push updates to GitHub:
+[source,sh]
+----
+git pull origin js-api-definitions
+git subtree split -P js-api-definitions --branch js-api-definitions --rejoin
+git push origin js-api-definitions
+git push git@github.com:structured-fit/js-api-definitions.git js-api-definitions:master
+----
