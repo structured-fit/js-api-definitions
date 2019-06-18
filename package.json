@@ -1,6 +1,6 @@
 {
   "name": "@structured-fit/js-api-definitions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Public API definitions for use with Structured Fitness",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
