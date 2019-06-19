@@ -5,5 +5,14 @@ node_js:
   - node
 
 after_success:
-  - $(npm bin)/nyc report --reporter=lcovonly
-  - $(npm bin)/codecov
+  - "$(npm bin)/nyc report --reporter=lcovonly"
+  - "$(npm bin)/codecov"
+
+deploy:
+  provider: npm
+  on:
+    tags: true
+  api_key:
+    secure: E18PFbSalMVpuFqKWInAKvgq6/7UbgfGCpPoQO3nSuLDdMFtB5gYEKYzDJkAcIrjACLF/6ifAFKHcCJBsvzGJkiMfJdov50kmNOj3+LeSR/qE7EJUqo2vGeY6gAUYgtgj1JHblzdP4npeJh/kXE/AFqAiYvbKfyvVNSUaHxg2KmxEij9gqCYneR4hhBwr48P70ro30YlgjeCyb8y54QNzNV4x8eHQSa8On1+bDkGJpc5Zl5erdun1p8D4VS6p2DfjxzFA5f+FuM3euU9s2hw35HbkIDdYrYVtL1YxoS+HwZOjjT536wQzupz9Tp62yEUa1GnNzbrgMnoz60f1cmNCspmDK3b4dgfM5D9T6sMcrrNo2BKB/+QCnWiOVjnNyBuiDSn79RVgMzx1Ddvz17j523kuU197x9r+m/jnCy3KH6cKUEoBRsEy1wz4jXwYWdjfK8T3resmnW/AbMquzj2kChFsHiraHhUGzqulNu7v4N9y1SxjmQpxSE8BL8gWIeKdmSWpQweH1e0gzoyu2lrTvitQBPhIL+NdptL220THwNGgZ545crp6of76GBrcELb5FsfXS6Lg5g5OK+MqB17xfPCOAzVyi1n0kxZ5MoyBTI5E8OccFmVgQCLrhpjUg8WxUXAYi+I9W1H4AOzSdTlSqiCJ/59ClAo+Per+Y207Do=
+  email:
+    secure: QqjvvUUjr3xeVshm/BSMMj2H/2WFyCgLRtqnaarcqvQJNM44vcFl7botX6UspzdRKye3ia8m7PdpoCJA5lOlDZFcSp/kerBhXPy+3/6mDzjlDfcVAEuwH5Va94W0GcJ7unkIkGiH/7oYTU2bqDu6d6yVMLPqc8udfdP6G2tAvnOy2Yt++iN6rkAcsUAs6PHXxtaBUhjVZFfdDDSyRJAE1iOdzEdaO1emU1N/+q+YsiMakWJJCSHsEEAtJWjSVlyS6KuRr62Io5t++qCmPXoH4lAeb0ZmDq379qK+ZIVBedgI1muDvdmaCvx3A4KPeln3CsHyQPS/S30+IWvRnnd3bplhFF81/8KRdZERljPQN16Hw7dybL+jBqg044F9rxG8m6EC7P3ZnvkJXGrIvhSWVQRmLABqmkUFGwHAxtEa8STHWyJCxRZIHErKr2yKAClYFBurGgGRE650eYf/sNJ014LA13tjfstx4YcQsjvoYOfLuvaqgmeu0gTBptjsRL4CML4/sX5JoFC+b4NG/OddBfFf/mmwx7TWepGQ8lhGfGLMkrCBynDR2kjAtbWiHIS/prhO9sn/dqDsh/nNBZtvHGagC8RgR+7oO7FnSZ42RXNw87WaxX2tl+OrKWBD/R7tDAXv2//AFV87uj+hTV8kSIHHK7YEW2OVtZdumfLJYo0=
